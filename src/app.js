@@ -16,6 +16,11 @@ window.onload = function() {
   var randomNum = Math.floor(Math.random() * numArray.length);
   var finalSuite = suitesArray[randomSuite];
   var finalNum = numArray[randomNum];
+  var answer =
+    finalSuite == suitesArray[0] || finalSuite == suitesArray[1]
+      ? document.getElementById("card").classList.add("red")
+      : document.getElementById("card").classList.remove("red");
+
   topCard.innerHTML = finalSuite;
   bottomCard.innerHTML = finalSuite;
   middleCard.innerHTML = finalNum;
